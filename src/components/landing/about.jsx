@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import paps from "../../assets/images/projects/website/paps.png";
-import nueva from "../../assets/images/projects//website/nueva.png";
-import clinic from "../../assets/images/projects//website/clinic.png";
+import paps from "../../assets/images/projects/website/paps.webp";
+import nueva from "../../assets/images/projects//website/nueva.webp";
+import clinic from "../../assets/images/projects//website/clinic.webp";
 // import pos from "../assets/images/projects//website/pos.png";
-import smartfit from "../../assets/images/projects/website/smartfit.png";
+import smartfit from "../../assets/images/projects/website/smartfit.webp";
 function About() {
   const sectionRef = useRef(null);
   const [animKey, setAnimKey] = useState(0);

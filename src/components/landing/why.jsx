@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import workImage from "../../assets/whywork.png";
+import workImage from "../../assets/whywork.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +21,7 @@ const STACK_GROUPS = [
       "Responsive Design",
       "System Thinking",
       "Database Design",
-      "Business Analysis"
+      "Business Analysis",
     ],
   },
 ];
@@ -33,7 +33,7 @@ const PILLARS = [
   },
   {
     label: "System Development",
-    desc: "Blending IoT, Web, and Database for seamless automation."
+    desc: "Blending IoT, Web, and Database for seamless automation.",
   },
   {
     label: "Design-Driven Thinking",
@@ -47,7 +47,6 @@ const PILLARS = [
     label: "Solution-Focused Approach",
     desc: "I solve problems, not just write features.",
   },
-  
 ];
 
 function Why() {

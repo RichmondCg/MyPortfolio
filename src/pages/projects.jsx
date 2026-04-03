@@ -4,16 +4,16 @@ import Navigation from "../components/navigation";
 import ProjectsCaseStudies from "../components/projects/ProjectsCaseStudies";
 import ProjectsHero from "../components/projects/ProjectsHero";
 import ProjectsIndex from "../components/projects/ProjectsIndex";
-import paps from "../assets/images/projects//website/paps.png";
-import nueva from "../assets/images/projects//website/nueva.png";
-import clinic from "../assets/images/projects//website/clinic.png";
-import pos from "../assets/images/projects//website/pos.png";
-import smartfit from "../assets/images/projects/website/smartfit.png";
-import fixit from "../assets/images/projects/website/fixit.jpg";
-import hydro from "../assets/images/projects/iot/hydro.jpg";
-import champion from "../assets/images/projects/iot/champion.jpg";
-import quail from "../assets/images/projects/iot/quail.jpg";
-import sfads from "../assets/images/projects/iot/sfads.jpg";
+import paps from "../assets/images/projects//website/paps.webp";
+import nueva from "../assets/images/projects//website/nueva.webp";
+import clinic from "../assets/images/projects//website/clinic.webp";
+import pos from "../assets/images/projects//website/pos.webp";
+import smartfit from "../assets/images/projects/website/smartfit.webp";
+import fixit from "../assets/images/projects/website/fixit.webp";
+import hydro from "../assets/images/projects/iot/hydro.webp";
+import champion from "../assets/images/projects/iot/champion.webp";
+import quail from "../assets/images/projects/iot/quail.webp";
+import sfads from "../assets/images/projects/iot/sfads.webp";
 
 function Projects() {
   const caseStudies = [

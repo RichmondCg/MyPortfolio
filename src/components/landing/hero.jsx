@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import image from "../../assets/hero.png";
+import image from "../../assets/hero.webp";
 import Navigation from "../navigation";
 
 function Hero() {

@@ -5,13 +5,13 @@ function Footer() {
     <footer className="flex flex-col lg:flex-row justify-between mx-7 lg:mx-20 my-4 space-y-4 lg:space-y-0 text-base text-[#1B263B]">
       <ul className="flex gap-12">
         <li>
-          <a href="/">Home</a>
+          <a href="/MyPortfolio">Home</a>
         </li>
         <li>
-          <a href="/about">About</a>
+          <a href="/MyPortfolio/about">About</a>
         </li>
         <li>
-          <a href="/projects">Projects</a>
+          <a href="/MyPortfolio/projects">Projects</a>
         </li>
       </ul>
       <p>&copy; 2026 Richmond Gillaco. All rights reserved.</p>
