@@ -87,7 +87,7 @@ function About() {
         className="mt-6 sm:mt-10 animate-fadeIn"
         style={{ animationDelay: "0.2s" }}
       >
-        <a href="/projects">
+        <a href="/MyPortfolio/projects">
           <p className="underline font-bold mb-4 hover:opacity-80">View all</p>
         </a>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 h-100">
