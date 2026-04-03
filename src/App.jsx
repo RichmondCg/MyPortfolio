@@ -6,7 +6,7 @@ import Projects from "./pages/projects";
 import "../src/App.css";
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/MyPortfolio/">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutPage />} />
