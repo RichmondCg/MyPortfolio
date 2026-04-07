@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ProjectsCaseStudies({ caseStudies }) {
   return (
     <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {caseStudies.map((study) => (
-        <article
+        <Link
           key={study.title}
+          to={`/projects/${study.slug}`}
           className="group overflow-hidden border border-white/15 bg-white/5 backdrop-blur animate-slideInUp"
         >
           <div className="relative h-60 overflow-hidden">
@@ -23,7 +25,7 @@ function ProjectsCaseStudies({ caseStudies }) {
             <h2 className="text-2xl font-bold">{study.title}</h2>
             <p className="text-sm text-white/70">{study.summary}</p>
           </div>
-        </article>
+        </Link>
       ))}
     </div>
   );

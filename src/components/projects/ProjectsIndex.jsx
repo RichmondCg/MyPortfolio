@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 function ProjectsIndex({
@@ -34,8 +35,8 @@ function ProjectsIndex({
       >
         {projects.map((project) => (
           <li key={project.title}>
-            <button
-              type="button"
+            <Link
+              to={`/projects/${project.slug}`}
               onMouseEnter={() => onProjectEnter(project)}
               onMouseLeave={onProjectLeave}
               onFocus={() => onProjectEnter(project)}
@@ -53,7 +54,7 @@ function ProjectsIndex({
                   <ArrowRight className="transition duration-300 group-hover:scale-110" />
                 </span>
               </div>
-            </button>
+            </Link>
           </li>
         ))}
       </ul>

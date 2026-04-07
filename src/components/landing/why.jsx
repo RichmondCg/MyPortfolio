@@ -12,6 +12,7 @@ const STACK_GROUPS = [
   },
   { category: "Backend", items: ["Node.js", "Express"] },
   { category: "Database", items: ["MySQL"] },
+  { category: "Design", items: ["Figma"] },
   { category: "IoT", items: ["Arduino, NodeMCU"] },
   { category: "CMS & Builder", items: ["WordPress", "Elementor"] },
   {
@@ -155,20 +156,20 @@ function Why() {
 
           {/* Pillars */}
           <div ref={pillarsRef}>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-300">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-300 mb-6">
               What I Bring
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
               {PILLARS.map((p) => (
                 <div
                   key={p.label}
                   data-pillar
-                  className="pillar-chip flex flex-col gap-1.5 rounded-xl border border-white/10 bg-white/[0.05] backdrop-blur-sm px-5 py-4"
+                  className="flex flex-col gap-1.5 rounded-xl border border-white/10 bg-white/[0.05] backdrop-blur-sm px-5 py-4"
                 >
-                  <span className="text-sm font-bold text-white leading-snug">
+                  <span className="text-md font-bold text-white leading-snug">
                     {p.label}
                   </span>
-                  <span className="text-xs text-slate-400 leading-relaxed">
+                  <span className="text-sm text-slate-400 leading-relaxed">
                     {p.desc}
                   </span>
                 </div>

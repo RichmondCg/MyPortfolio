@@ -4,119 +4,12 @@ import Navigation from "../components/navigation";
 import ProjectsCaseStudies from "../components/projects/ProjectsCaseStudies";
 import ProjectsHero from "../components/projects/ProjectsHero";
 import ProjectsIndex from "../components/projects/ProjectsIndex";
-import paps from "../assets/images/projects//website/paps.webp";
-import nueva from "../assets/images/projects//website/nueva.webp";
-import clinic from "../assets/images/projects//website/clinic.webp";
-import pos from "../assets/images/projects//website/pos.webp";
-import smartfit from "../assets/images/projects/website/smartfit.webp";
-import fixit from "../assets/images/projects/website/fixit.webp";
-import hydro from "../assets/images/projects/iot/hydro.webp";
-import champion from "../assets/images/projects/iot/champion.webp";
-import quail from "../assets/images/projects/iot/quail.webp";
-import sfads from "../assets/images/projects/iot/sfads.webp";
+import { projects, caseStudies, categories } from "../data/projects";
 
 function Projects() {
-  const caseStudies = [
-    {
-      title: "NuevaCare Clinic",
-      type: "Web App / Case Study",
-      summary:
-        "A modern healthcare website with 3d object and chatbot integration using pre-built model for appointment scheduling and patient support.",
-      image: clinic,
-    },
-    {
-      title: "SweetCrumbs POS/Inventory System",
-      type: "Web App / Case Study",
-      summary:
-        "A user-friendly POS and inventory management system built with React, Node.js, and MySQL, designed to streamline operations for small businesses.",
-      image: pos,
-    },
-    {
-      title: "SmartFit",
-      type: "Landing Page / Wordpress",
-      summary:
-        "A Wordpress-based landing page for a fitness brand, using the free of Wordpress ",
-      image: smartfit,
-    },
-    {
-      title: "FixIt",
-      type: "Web App / Capstone Project",
-      summary:
-        "A React-based web app for blue-collar workers to connect with clients, featuring job listings, profiles, and a secure messaging system.",
-      image: fixit,
-    },
-  ];
-
-  const projects = [
-    {
-      title: "PAPS Barbershop",
-      type: "Web App",
-      category: "Web Dev",
-      image: paps,
-    },
-    {
-      title: "Nueva Insights Marketing",
-      type: "Website",
-      category: "Web Dev",
-      image: nueva,
-    },
-    {
-      title: "NuevaCare Clinic",
-      type: "Web App",
-      category: "Web Dev",
-      image: clinic,
-    },
-    {
-      title: "SweetCrumbs POS/Inventory System",
-      type: "Web App",
-      category: "Web Dev",
-      image: pos,
-    },
-    {
-      title: "SmartFit",
-      type: "Landing Page",
-      category: "Web Dev",
-      image: smartfit,
-    },
-    {
-      title: "FixIt",
-      type: "Web App",
-      category: "Web Dev",
-      image: fixit,
-    },
-    {
-      title: "Solar-Powered Arduino-Based Automated Irrigation System",
-      type: "Arduino",
-      category: "IoT",
-      image: hydro,
-    },
-    {
-      title:
-        "Solar Powered Automated Irrigation System for Farmers with Monitoring App",
-      type: "IoT",
-      category: "IoT",
-      image: champion,
-    },
-    {
-      title:
-        "SFADS – Smart Feeding and Drinking System with SMS Updates for Poultry Farmers",
-      type: "IoT",
-      category: "IoT",
-      image: sfads,
-    },
-    {
-      title: "Solar-Powered Automatic Feed Dispenser for Quails",
-      type: "Arduino",
-      category: "IoT",
-      image: quail,
-    },
-  ];
-
   const [hoveredProject, setHoveredProject] = useState(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [activeCategory, setActiveCategory] = useState("All");
-
-  const categories = ["All", "Web Dev", "IoT", "Mobile Dev"];
   const filteredProjects =
     activeCategory === "All"
       ? projects
