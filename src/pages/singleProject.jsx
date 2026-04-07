@@ -192,15 +192,15 @@ function SingleProject() {
           </div>
         </section>
 
-        <section className="recede relative pb-16 text-slate-900 origin-top">
+        <section className="relative pb-16 text-slate-900">
           <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 lg:px-14">
             <div className="flex flex-wrap items-center justify-between gap-4">
-              <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+              <h2 className="text-2xl lg:text-5xl font-bold text-slate-900">
                 More projects
               </h2>
               <Link
                 to="/projects"
-                className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500 transition duration-300 hover:text-slate-900"
+                className="text-xs lg:text-lg font-semibold uppercase tracking-[0.25em] text-slate-500 transition duration-300 hover:text-slate-900"
               >
                 View all projects
               </Link>
@@ -221,10 +221,10 @@ function SingleProject() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/80 via-transparent to-transparent" />
                   </div>
                   <div className="space-y-2 px-5 pb-6 pt-5">
-                    <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
+                    <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
                       {item.type}
                     </p>
-                    <h3 className="text-lg font-bold text-slate-900">
+                    <h3 className="text-2xl font-bold text-slate-900">
                       {item.title}
                     </h3>
                   </div>

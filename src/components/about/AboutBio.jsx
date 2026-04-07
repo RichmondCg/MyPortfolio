@@ -26,7 +26,9 @@ function AboutBio({ highlights }) {
               {highlights.map((item, index) => (
                 <li key={index} className="flex items-start gap-4">
                   <div className="mt-0.5 shrink-0 rounded-xl border border-white/10 bg-white/5 p-2">
-                    {item.icon}
+                    {item.icon ? (
+                      <item.icon className="h-5 w-5 text-[#93c5fd]" />
+                    ) : null}
                   </div>
                   <span className="leading-relaxed">{item.text}</span>
                 </li>
