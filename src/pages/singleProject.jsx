@@ -177,6 +177,8 @@ function SingleProject() {
                   <img
                     src={image}
                     alt={`${project.title} gallery ${index + 1}`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full object-contain"
                   />
                 </div>
@@ -216,6 +218,8 @@ function SingleProject() {
                     <img
                       src={item.image}
                       alt={item.title}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/80 via-transparent to-transparent" />

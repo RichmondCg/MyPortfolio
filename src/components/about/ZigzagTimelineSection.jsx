@@ -15,7 +15,7 @@ function ZigzagTimelineSection({ title, eyebrow, items }) {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=300%", // 3 screens total (2 transitions + 1 solid hold buffer)
+          end: "+=200%", // 3 screens total (2 transitions + 1 solid hold buffer)
           pin: true,
           pinSpacing: true,
           scrub: true,

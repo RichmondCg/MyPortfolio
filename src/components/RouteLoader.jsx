@@ -19,7 +19,9 @@ function RouteLoader() {
     setIsExiting(false);
 
     const waitForImages = () => {
-      const images = Array.from(document.images || []);
+      const images = Array.from(document.images || []).filter(
+        (img) => img.loading !== "lazy",
+      );
       if (images.length === 0) return Promise.resolve();
 
       return Promise.all(
