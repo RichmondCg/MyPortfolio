@@ -1,8 +1,7 @@
 import React from "react";
-
 function AboutHero() {
   return (
-    <div className="relative z-10 w-full px-6 pt-16 sm:px-10 lg:px-14">
+    <div className="relative z-10 w-full px-6 pt-16 sm:px-10 lg:px-14 gap-8">
       <div className="max-w-3xl animate-fadeIn">
         <p className="text-4xl font-black uppercase text-white sm:text-6xl lg:text-8xl">
           About me

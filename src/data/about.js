@@ -1,4 +1,4 @@
-import { Code2, Server, LayoutTemplate, Cpu } from "lucide-react";
+import { Code2, Server, LayoutTemplate, Cpu, Database } from "lucide-react";
 
 const timeline = [
   {
@@ -41,6 +41,10 @@ const highlights = [
   {
     text: "System design that balances UX and performance",
     icon: Server,
+  },
+  {
+    text: "Database design that are normalized and optimized",
+    icon: Database,
   },
   {
     text: "WordPress + Elementor for rapid content delivery",
