@@ -2,53 +2,9 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import workImage from "../../assets/whywork.webp";
+import { pillars, stackGroups } from "../../data/landingWhy";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const STACK_GROUPS = [
-  {
-    category: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React JS", "Tailwind"],
-  },
-  { category: "Backend", items: ["Node.js", "Express"] },
-  { category: "Database", items: ["MySQL"] },
-  { category: "Design", items: ["Figma"] },
-  { category: "IoT", items: ["Arduino, NodeMCU"] },
-  { category: "CMS & Builder", items: ["WordPress", "Elementor"] },
-  {
-    category: "Other Skills",
-    items: [
-      "UI/UX Design",
-      "Responsive Design",
-      "System Thinking",
-      "Database Design",
-      "Business Analysis",
-    ],
-  },
-];
-
-const PILLARS = [
-  {
-    label: "Full Stack Development",
-    desc: "End-to-end web solutions from UI to server.",
-  },
-  {
-    label: "System Development",
-    desc: "Blending IoT, Web, and Database for seamless automation.",
-  },
-  {
-    label: "Design-Driven Thinking",
-    desc: "Aesthetic meets function in every decision.",
-  },
-  {
-    label: "Modern Tools & Technologies",
-    desc: "Current stack, best practices, clean code.",
-  },
-  {
-    label: "Solution-Focused Approach",
-    desc: "I solve problems, not just write features.",
-  },
-];
 
 function Why() {
   const sectionRef = useRef(null);
@@ -134,7 +90,7 @@ function Why() {
               Technologies &amp; Tools
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5">
-              {STACK_GROUPS.map((group) => (
+              {stackGroups.map((group) => (
                 <div key={group.category}>
                   <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-1.5">
                     {group.category}
@@ -160,7 +116,7 @@ function Why() {
               What I Bring
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
-              {PILLARS.map((p) => (
+              {pillars.map((p) => (
                 <div
                   key={p.label}
                   data-pillar

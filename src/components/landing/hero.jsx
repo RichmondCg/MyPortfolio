@@ -1,18 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import image from "../../assets/hero.webp";
+import { heroCards } from "../../data/landingHero";
 import Navigation from "../navigation";
 
 function Hero() {
   const sectionRef = useRef(null);
   const [animKey, setAnimKey] = useState(0);
-  const cards = [
-    { number: "01", text: "Frontend Development" },
-    { number: "02", text: "System Development" },
-    { number: "03", text: "Wordpress & Elementor" },
-    { number: "04", text: "System Analysis" },
-    { number: "05", text: "Internet of things" },
-  ];
-
   useEffect(() => {
     const sectionEl = sectionRef.current;
     if (!sectionEl) return;
@@ -91,7 +84,7 @@ function Hero() {
 
         {/* Bottom Cards */}
         <div className="mt-auto grid grid-cols-2 sm:grid-cols-3 lg:flex lg:justify-between gap-x-6 gap-y-4 sm:gap-8 lg:gap-12 px-1 sm:px-4 lg:px-6 z-50">
-          {cards.map((card, index) => (
+          {heroCards.map((card, index) => (
             <div
               key={index}
               className={`flex flex-col cursor-pointer group transition-all duration-300 animate-slideInUp`}

@@ -169,6 +169,7 @@ export const projects = [
     title: "Nueva Insights Marketing",
     type: "Website",
     category: "Web Dev",
+    website: "https://nuevainsightsmarketing.com/",
     summary:
       "A modern marketing site emphasizing credibility, results, and clear service offerings.",
     image: nueva,

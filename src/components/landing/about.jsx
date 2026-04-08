@@ -1,10 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import paps from "../../assets/images/projects/website/paps.webp";
-import nueva from "../../assets/images/projects//website/nueva.webp";
-import clinic from "../../assets/images/projects//website/clinic.webp";
-// import pos from "../assets/images/projects//website/pos.png";
-import smartfit from "../../assets/images/projects/website/smartfit.webp";
+import { landingAboutWebsites } from "../../data/landingAbout";
 function About() {
   const sectionRef = useRef(null);
   const [animKey, setAnimKey] = useState(0);
@@ -26,20 +22,6 @@ function About() {
     return () => observer.disconnect();
   }, []);
 
-  const websites = [
-    {
-      name: paps,
-    },
-    {
-      name: nueva,
-    },
-    {
-      name: clinic,
-    },
-    {
-      name: smartfit,
-    },
-  ];
   return (
     <section
       id="about"
@@ -91,9 +73,9 @@ function About() {
           <p className="underline font-bold mb-4 hover:opacity-80">View all</p>
         </a>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 h-100">
-          {websites.map((website) => {
+          {landingAboutWebsites.map((website, index) => {
             return (
-              <div className="rounded-2xl overflow-hidden">
+              <div className="rounded-2xl overflow-hidden" key={index}>
                 <img
                   src={website.name}
                   alt="paps website"

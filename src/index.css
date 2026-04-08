@@ -37,6 +37,43 @@
   }
 }
 
+@keyframes drawName {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes loaderFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes crossBounceRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  40% {
+    transform: translateY(-12px) rotate(90deg);
+  }
+  70% {
+    transform: translateY(0) rotate(180deg);
+  }
+  100% {
+    transform: translateY(-6px) rotate(270deg);
+  }
+}
+
+@keyframes crossFillUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
 .animate-fadeIn {
   animation: fadeIn 0.8s ease-in-out forwards;
 }
@@ -47,6 +84,28 @@
 
 .animate-slideInUp {
   animation: slideInUp 0.8s ease-out forwards;
+}
+
+.name-stroke path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: drawName 2.6s ease forwards;
+}
+
+.loader-fade {
+  animation: loaderFadeOut 0.4s ease forwards;
+}
+
+.loader-cross {
+  width: 56px;
+  height: 56px;
+  animation: crossBounceRotate 1.2s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+.cross-fill {
+  transform: translateY(100%);
+  animation: crossFillUp 1.2s ease forwards;
 }
 
 /* ── Why section ── */

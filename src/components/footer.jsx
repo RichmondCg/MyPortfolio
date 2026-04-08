@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FOOTERLINKS } from "../data/footerLinks";
 
 function Footer() {
   return (
@@ -17,58 +18,20 @@ function Footer() {
       </ul>
       <p>&copy; 2026 Richmond Gillaco. All rights reserved.</p>
       <div className="flex items-center gap-4">
-        <a
-          href="#"
-          aria-label="GitHub"
-          className="transition-opacity hover:opacity-80"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/24/1B263B/github.png"
-            alt="GitHub"
-            className="h-5 w-5"
-          />
-        </a>
-        <a
-          href="#"
-          aria-label="LinkedIn"
-          className="transition-opacity hover:opacity-80"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/24/1B263B/linkedin.png"
-            alt="LinkedIn"
-            className="h-5 w-5"
-          />
-        </a>
-        <a
-          href="#"
-          aria-label="Facebook"
-          className="transition-opacity hover:opacity-80"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/24/1B263B/facebook-new.png"
-            alt="Facebook"
-            className="h-5 w-5"
-          />
-        </a>
-        <a
-          href="#"
-          aria-label="Instagram"
-          className="transition-opacity hover:opacity-80"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/24/1B263B/instagram-new.png"
-            alt="Instagram"
-            className="h-5 w-5"
-          />
-        </a>
+        {FOOTERLINKS.map((link, index) => {
+          return (
+            <a
+              key={index}
+              href={link.link}
+              aria-label={link.label}
+              className="transition-opacity hover:opacity-80"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={link.imageSrc} alt={link.label} className="h-5 w-5" />
+            </a>
+          );
+        })}
       </div>
     </footer>
   );

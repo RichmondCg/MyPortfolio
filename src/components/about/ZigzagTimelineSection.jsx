@@ -17,8 +17,8 @@ function ZigzagTimelineSection({ title, eyebrow, items }) {
           start: "top top",
           end: "+=300%", // 3 screens total (2 transitions + 1 solid hold buffer)
           pin: true,
-          pinSpacing: true, // Explicitly enforce document flow padding
-          scrub: true, // Swapped from 1 to true to definitively lock animation progress to scroll pixel and prevent overlapping unpin lag
+          pinSpacing: true,
+          scrub: true,
           refreshPriority: 10, // Calculates this giant pin FIRST
           snap: {
             snapTo: [0, 0.333, 0.666, 1], // mathematically rigorous snapping for the 3 bounds

@@ -1,25 +1,11 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { navLinks } from "../data/navigation";
 
 function Navigation() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const links = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "About",
-      path: "/about",
-    },
-    {
-      name: "Projects",
-      path: "/projects",
-    },
-  ];
-
   const handleLinkClick = (e, path, name) => {
     if (path.startsWith("/#") && location.pathname === "/") {
       e.preventDefault();
@@ -42,7 +28,7 @@ function Navigation() {
   return (
     <nav className="relative z-50 flex justify-between items-center mx-4 lg:mx-15 mt-6 sm:mt-10">
       <ul className="hidden lg:flex gap-12 text-white">
-        {links.map((link) => (
+        {navLinks.map((link) => (
           <li key={link.name}>
             <Link
               to={link.path}
@@ -84,7 +70,7 @@ function Navigation() {
 
       {isOpen && (
         <div className="absolute right-0 top-full mt-3 w-56 rounded-2xl bg-white/95 backdrop-blur shadow-lg p-4 flex flex-col gap-3 text-[#1B263B] lg:hidden">
-          {links.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
