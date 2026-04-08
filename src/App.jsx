@@ -6,6 +6,7 @@ import Projects from "./pages/projects";
 import SingleProject from "./pages/singleProject";
 import BootLoader from "./components/BootLoader";
 import RouteLoader from "./components/RouteLoader";
+import ScrollToTop from "./components/ScrollToTop";
 import "../src/App.css";
 function App() {
   const [showLoader, setShowLoader] = useState(true);
@@ -59,6 +60,7 @@ function App() {
     <>
       {showLoader && <BootLoader isExiting={isExiting} />}
       <BrowserRouter basename="/MyPortfolio/">
+        <ScrollToTop />
         <RouteLoader />
         <Routes>
           <Route path="/" element={<LandingPage />} />

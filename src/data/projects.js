@@ -57,12 +57,81 @@ export const projects = [
       "We combined a clean design system with interactive elements to communicate trust. The chatbot and booking flow were built to answer common questions and convert visits into scheduled appointments.",
     ],
     website: "https://nuevacare-clinic.com",
-    tools: ["React", "Vite", "Tailwind CSS", "GSAP", "Figma"],
+    tools: ["React", "Express", "Tailwind CSS", "GSAP", "WebGL", "Supabase"],
     involvement:
       "Led end-to-end UI design and front-end build, from wireframes to responsive implementation and motion polish.",
     approach: [
       "We started by mapping the patient journey to reduce friction across discovery, services, and booking. Content hierarchy was shaped around immediate trust signals like credentials, service clarity, and clinic credibility.",
       "From there, we built a modular UI system that keeps the experience calm and modern while supporting interactive elements like the chatbot and guided booking flow.",
+    ],
+    featured: true,
+  },
+  {
+    slug: "paps-barbershop",
+    title: "PAPS Barbershop",
+    type: "Web App",
+    category: "Web Dev",
+    summary:
+      "A sharp, brand-forward web app that highlights services, pricing, and booking details.",
+    image: paps,
+    gallery: [paps],
+    goals: [
+      "Showcase services and pricing clearly",
+      "Reinforce the barbershop brand",
+      "Encourage repeat bookings",
+    ],
+    deliverables: [
+      "Service catalog",
+      "Brand-focused UI",
+      "Mobile-first layout",
+    ],
+    story: [
+      "PAPS needed a clean digital presence that reflects their in-shop experience. We used bold typography and focused sections to keep it simple and memorable.",
+    ],
+  },
+
+  {
+    slug: "nueva-insights-marketing",
+    title: "Nueva Insights Marketing",
+    type: "Website",
+    category: "Web Dev",
+    website: "https://nuevainsightsmarketing.com/",
+    summary:
+      "A modern marketing site emphasizing credibility, results, and clear service offerings.",
+    image: nueva,
+    gallery: [nueva],
+    goals: [
+      "Communicate services in seconds",
+      "Build trust with a clean layout",
+      "Support lead generation",
+    ],
+    deliverables: ["Service overview", "Case-driven storytelling", "Lead CTA"],
+    story: [
+      "The site presents the agency's value quickly, using a clean grid, bold sectioning, and proof-driven messaging to encourage outreach.",
+    ],
+  },
+  {
+    slug: "smartfit",
+    title: "SmartFit",
+    type: "Landing Page / WordPress",
+    category: "Web Dev",
+    summary:
+      "A WordPress landing page for a fitness brand, focused on fast content updates and campaign performance.",
+    image: smartfit,
+    gallery: [smartfit],
+    goals: [
+      "Launch quickly for marketing campaigns",
+      "Enable non-technical content updates",
+      "Drive conversions with clear CTAs",
+    ],
+    deliverables: [
+      "WordPress landing page",
+      "Reusable section templates",
+      "Performance-optimized layout",
+    ],
+    story: [
+      "SmartFit needed a strong campaign page that could be updated in-house. We prioritized speed, clarity, and conversion-focused sections.",
+      "The result is a flexible landing page that supports rapid updates without sacrificing design consistency.",
     ],
     featured: true,
   },
@@ -91,31 +160,7 @@ export const projects = [
     ],
     featured: true,
   },
-  {
-    slug: "smartfit",
-    title: "SmartFit",
-    type: "Landing Page / WordPress",
-    category: "Web Dev",
-    summary:
-      "A WordPress landing page for a fitness brand, focused on fast content updates and campaign performance.",
-    image: smartfit,
-    gallery: [smartfit],
-    goals: [
-      "Launch quickly for marketing campaigns",
-      "Enable non-technical content updates",
-      "Drive conversions with clear CTAs",
-    ],
-    deliverables: [
-      "WordPress landing page",
-      "Reusable section templates",
-      "Performance-optimized layout",
-    ],
-    story: [
-      "SmartFit needed a strong campaign page that could be updated in-house. We prioritized speed, clarity, and conversion-focused sections.",
-      "The result is a flexible landing page that supports rapid updates without sacrificing design consistency.",
-    ],
-    featured: true,
-  },
+
   {
     slug: "fixit",
     title: "FixIt",
@@ -140,49 +185,6 @@ export const projects = [
       "The platform uses familiar patterns so both clients and workers can onboard quickly and start transacting with confidence.",
     ],
     featured: true,
-  },
-  {
-    slug: "paps-barbershop",
-    title: "PAPS Barbershop",
-    type: "Web App",
-    category: "Web Dev",
-    summary:
-      "A sharp, brand-forward web app that highlights services, pricing, and booking details.",
-    image: paps,
-    gallery: [paps],
-    goals: [
-      "Showcase services and pricing clearly",
-      "Reinforce the barbershop brand",
-      "Encourage repeat bookings",
-    ],
-    deliverables: [
-      "Service catalog",
-      "Brand-focused UI",
-      "Mobile-first layout",
-    ],
-    story: [
-      "PAPS needed a clean digital presence that reflects their in-shop experience. We used bold typography and focused sections to keep it simple and memorable.",
-    ],
-  },
-  {
-    slug: "nueva-insights-marketing",
-    title: "Nueva Insights Marketing",
-    type: "Website",
-    category: "Web Dev",
-    website: "https://nuevainsightsmarketing.com/",
-    summary:
-      "A modern marketing site emphasizing credibility, results, and clear service offerings.",
-    image: nueva,
-    gallery: [nueva],
-    goals: [
-      "Communicate services in seconds",
-      "Build trust with a clean layout",
-      "Support lead generation",
-    ],
-    deliverables: ["Service overview", "Case-driven storytelling", "Lead CTA"],
-    story: [
-      "The site presents the agency's value quickly, using a clean grid, bold sectioning, and proof-driven messaging to encourage outreach.",
-    ],
   },
   {
     slug: "solar-powered-arduino-irrigation",
