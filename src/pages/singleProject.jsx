@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useMemo, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navigation from "../components/navigation";
 import Footer from "../components/footer";
@@ -69,12 +69,28 @@ function SingleProject() {
   }
 
   const gallery = project.gallery?.length ? project.gallery : [project.image];
-  const galleryPreview = gallery;
-  const tools = project.tools?.length ? project.tools : [];
-  const approach = project.approach?.length ? project.approach : [];
-  const moreProjects = projects
-    .filter((item) => item.slug !== slug)
-    .slice(0, 3);
+  const tools = project.tools ?? [];
+  const approach = project.approach ?? [];
+  const moreProjects = useMemo(() => {
+    const currentIndex = projects.findIndex((item) => item.slug === slug);
+    if (currentIndex === -1) return projects.slice(0, 3);
+
+    const nextItems = [];
+    for (let offset = 1; offset <= 3; offset += 1) {
+      const nextIndex = (currentIndex + offset) % projects.length;
+      nextItems.push(projects[nextIndex]);
+    }
+
+    return nextItems;
+  }, [slug]);
+
+  useEffect(() => {
+    moreProjects.forEach((item) => {
+      if (!item.image) return;
+      const img = new Image();
+      img.src = item.image;
+    });
+  }, [moreProjects]);
 
   return (
     <>
@@ -156,7 +172,7 @@ function SingleProject() {
           </div>
         </section>
 
-        <section className="recede relative bg-white text-slate-900 origin-top">
+        <section className="relative bg-white text-slate-900">
           <div className="relative z-10 mx-auto w-full max-w-6xl space-y-10 px-6 sm:px-10 lg:px-14">
             <img
               src={project.image}
@@ -169,7 +185,7 @@ function SingleProject() {
               ))}
             </div>
             <div className="grid gap-4 lg:gap-8 sm:grid-cols-2">
-              {galleryPreview.map((image, index) => (
+              {gallery.map((image, index) => (
                 <div
                   key={`${project.slug}-gallery-${index}`}
                   className="overflow-hidden border border-slate-200 bg-white"
@@ -194,7 +210,7 @@ function SingleProject() {
           </div>
         </section>
 
-        <section className="relative pb-16 text-slate-900">
+        <section className="relative pb-16 text-slate-900 mt-20">
           <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 lg:px-14">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <h2 className="text-2xl lg:text-5xl font-bold text-slate-900">
