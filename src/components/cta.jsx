@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Cta() {
+  const [email, setEmail] = useState("");
+  const [brief, setBrief] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const subject = "New project inquiry";
+    const body = `From: ${email}\n\nProject brief:\n${brief}`;
+    const mailto = `mailto:richmondcamusgillaco@gmail.com?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  };
+
   return (
     <section id="cta" className="px-0 sm:px-10 lg:px-20 py-16">
       <div className="flex flex-col lg:flex-row items-center relative overflow-hidden lg:rounded-3xl bg-gradient-to-tr from-[#6E4D3C] to-[#281004] px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16 gap-6">
@@ -13,23 +26,35 @@ function Cta() {
             a purposeful and effective solution.
           </p>
         </div>
-        <div className="lg:mt-8 flex flex-col items-center justify-center gap-4 w-full lg:w-auto">
+        <form
+          onSubmit={handleSubmit}
+          className="lg:mt-8 flex flex-col items-center justify-center gap-4 w-full lg:w-auto"
+        >
           <div className="flex w-full flex-col space-y-4 sm:items-center">
             <input
-              type="text"
+              type="email"
               placeholder="Your email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              required
               className="w-full sm:w-[360px] lg:w-[420px] rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm sm:text-base text-white placeholder:text-white/60 outline-none transition-all focus:border-white/60 focus:bg-white/15"
             />
             <textarea
               rows={4}
               placeholder="Project brief"
+              value={brief}
+              onChange={(event) => setBrief(event.target.value)}
+              required
               className="w-full sm:w-[360px] lg:w-[420px] rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-sm sm:text-base text-white placeholder:text-white/60 outline-none transition-all focus:border-white/60 focus:bg-white/15 resize-none"
             />
           </div>
-          <button className="w-full sm:w-[360px] lg:w-[420px] rounded-full bg-white px-6 py-3 text-sm sm:text-base font-semibold text-[#0D1B2A] transition-transform hover:-translate-y-0.5">
+          <button
+            type="submit"
+            className="w-full sm:w-[360px] lg:w-[420px] rounded-full bg-white px-6 py-3 text-sm sm:text-base font-semibold text-[#0D1B2A] transition-transform hover:-translate-y-0.5"
+          >
             Send message
           </button>
-        </div>
+        </form>
       </div>
     </section>
   );

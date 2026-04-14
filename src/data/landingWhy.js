@@ -8,6 +8,7 @@ const stackGroups = [
   { category: "Design", items: ["Figma"] },
   { category: "IoT", items: ["Arduino, NodeMCU"] },
   { category: "CMS & Builder", items: ["WordPress", "Elementor"] },
+  { category: "AI Tools", items: ["Claude AI", "ChatGPT"] },
   {
     category: "Other Skills",
     items: [
@@ -15,6 +16,7 @@ const stackGroups = [
       "Responsive Design",
       "System Thinking",
       "Database Design",
+      "Project Management",
       "Business Analysis",
     ],
   },
