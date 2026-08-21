@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero.jsx";
 import Works from "./components/Works.jsx";
 import AllWorks from "./components/AllWorks.jsx";
@@ -21,7 +21,7 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/works" element={<AllWorks />} />
@@ -32,7 +32,7 @@ function App() {
         <Route path="/certifications" element={<Certifications />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
