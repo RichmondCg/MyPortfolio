@@ -219,7 +219,7 @@ export function WorkCard({ project, index, cursorRef, isHoverDevice }) {
         style={{ cursor: isHoverDevice ? "none" : "pointer" }}
       >
         <a
-          href={project.link}
+          href={'#' + project.link}
           aria-label={`View ${project.title} project`}
           className="block"
         >
@@ -253,7 +253,7 @@ export function ViewAllButton() {
   return (
     <div className="mt-20 md:mt-28 text-center">
       <a
-        href="/works"
+        href="#/works"
         className="inline-flex items-center gap-4 border border-black rounded-full px-10 py-5 text-[12px] tracking-[0.25em] uppercase font-mono hover:bg-black hover:text-white transition-colors duration-300"
       >
         View all

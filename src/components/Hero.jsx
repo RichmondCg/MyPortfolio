@@ -237,7 +237,7 @@ function Hero() {
 
           <a
             ref={btnRef}
-            href="/me"
+            href="#/me"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{ willChange: "transform" }}
