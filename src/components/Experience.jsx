@@ -115,7 +115,7 @@ function Experience() {
 
         <div ref={footRef} className="my-10 border-t border-black/10 py-10">
           <Link
-            to="#/me"
+            to="/me"
             className="group inline-flex items-center gap-4 rounded-full border border-black px-8 py-4 text-[11px] tracking-[0.25em] uppercase transition-colors duration-300 hover:bg-black hover:text-white"
           >
             Back to about
