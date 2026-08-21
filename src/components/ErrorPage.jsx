@@ -4,7 +4,9 @@ function ErrorPage() {
   return (
     <main className="flex justify-center items-center w-full h-full">
       <div>
-        <h1 className="text-[12rem] font-black">Error 404</h1>
+        <h1 className="text-[clamp(4rem,20vw,12rem)] font-black text-center">
+          Error 404
+        </h1>
         <div className="my-10 border-t border-black/10 py-10 text-center">
           <Link
             to="/"
