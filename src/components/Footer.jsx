@@ -110,7 +110,7 @@ export default function Footer() {
                 Let's work together
               </span>
             </p>
-            <h2 className="font-display text-[clamp(2.8rem,6vw,5.5rem)] leading-[0.92] tracking-tight">
+            <h2 className="font-black text-[clamp(2.8rem,6vw,5.5rem)] leading-[0.92] tracking-tighter">
               {["Let's built it!", "Together."].map((line, i) => (
                 <span key={i} className="block overflow-hidden">
                   <span className="footer-line-inner block">{line}</span>

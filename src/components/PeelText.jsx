@@ -6,7 +6,7 @@ const FADE_DURATION = 3000;
 const STAMP_STEP = 4;
 const REVEAL_DURATION = 1500;
 
-const TEXT_COLORS = ["#000000", "#FFD700", "#FF8C00", "#4169E1", "#228B22"];
+const TEXT_COLORS = ["#000000", "#FF8C00", "#4169E1", "#228B22"];
 
 function PeelText({ text, className, revealDelay = 0 }) {
   const wrapRef = useRef(null);
@@ -298,7 +298,10 @@ function PeelText({ text, className, revealDelay = 0 }) {
       coverH = cssH;
 
       const tickReveal = () => {
-        const t = Math.min(1, (performance.now() - revealStartTime) / REVEAL_DURATION);
+        const t = Math.min(
+          1,
+          (performance.now() - revealStartTime) / REVEAL_DURATION,
+        );
         const eased = 1 - Math.pow(1 - t, 3);
         coverH = cssH * (1 - eased);
         render();

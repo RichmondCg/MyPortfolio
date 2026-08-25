@@ -70,7 +70,7 @@ function AboutMe() {
           <PhotoStack />
         </div>
         {/* description */}
-        <div ref={copyRef} className="mt-8 max-w-2xl">
+        <div ref={copyRef} className="mt-8">
           <p className="text-sm leading-relaxed md:text-base">
             I build thoughtful, playful web experiences at the intersection of
             design and engineering. My work blends bold typography, motion, and
