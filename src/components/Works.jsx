@@ -199,7 +199,7 @@ export function WorkCard({ project, index, cursorRef, isHoverDevice }) {
       <div className="mb-4 md:mb-5">
         <h2
           ref={titleRef}
-          className="work-title font-extrabold text-[clamp(1.75rem,3.5vw,3rem)] leading-[0.95] tracking-tight text-black"
+          className="work-title font-secondhead font-bold text-[clamp(1.75rem,3.5vw,3rem)] leading-[0.95] tracking-tight text-black"
           style={{ willChange: "transform, opacity" }}
         >
           {project.title}
