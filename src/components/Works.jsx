@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 import { homeProjects } from "../data/projects.js";
 gsap.registerPlugin(ScrollTrigger);
 
-export function WorkCard({ project, index, cursorRef, isHoverDevice }) {
+export function WorkCard({ project, cursorRef, isHoverDevice }) {
   const cardRef = useRef(null);
   const imgWrapRef = useRef(null);
   const imgRef = useRef(null);
@@ -69,7 +70,7 @@ export function WorkCard({ project, index, cursorRef, isHoverDevice }) {
           start: "top bottom",
           end: "bottom top",
           scrub: 0.6,
-          onUpdate: (self) => {
+          onUpdate: () => {
             gsap.set(img, { y: 0 });
           },
         });
@@ -103,7 +104,7 @@ export function WorkCard({ project, index, cursorRef, isHoverDevice }) {
           start: "top bottom",
           end: "bottom top",
           scrub: 0.6,
-          onUpdate: (self) => {
+          onUpdate: () => {
             gsap.set(img, { y: 0 });
           },
         });
@@ -218,8 +219,8 @@ export function WorkCard({ project, index, cursorRef, isHoverDevice }) {
         className="relative"
         style={{ cursor: isHoverDevice ? "none" : "pointer" }}
       >
-        <a
-          href={"#" + project.link}
+        <Link
+          to={project.link}
           aria-label={`View ${project.title} project`}
           className="block"
         >
@@ -243,7 +244,7 @@ export function WorkCard({ project, index, cursorRef, isHoverDevice }) {
               loading="lazy"
             />
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -336,7 +337,7 @@ export default function Works() {
       className="relative bg-white pt-28 md:pt-40 pb-24 overflow-hidden"
     >
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 md:px-12">
-        <div className="flex items-end justify-between mb-10 md:mb-16">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between space-y-3 mb-6 md:mb-16">
           <div ref={labelRef}>
             <h1 className="font-display text-[clamp(2rem,8vw,12rem)] leading-[0.8] tracking-tight text-black">
               Works

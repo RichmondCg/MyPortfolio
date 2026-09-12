@@ -97,22 +97,49 @@ function Navigation({ navRef, items }) {
           </span>
         </Link>
 
+        <nav
+          aria-label="Primary navigation"
+          className="hidden items-center gap-8 md:flex"
+        >
+          {navItems.map((item) =>
+            item.hash ? (
+              <button
+                key={item.label}
+                type="button"
+                onClick={() => handleClick(item)}
+                className="text-xs font-extrabold uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-50"
+              >
+                {item.label}
+              </button>
+            ) : (
+              <Link
+                key={item.label}
+                to={item.to}
+                className="text-xs font-extrabold uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-50"
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
+        </nav>
+
         <button
           type="button"
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="group relative z-40 flex cursor-pointer items-center gap-3 text-xs uppercase tracking-[0.3em]
-          after:absolute after:bottom-[-8px] after:left-0 after:h-[5px] after:w-0
-          after:bg-current after:transition-all after:duration-500
-          hover:after:w-full"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          className="group relative z-40 flex cursor-pointer flex-col gap-1.5 md:hidden"
         >
-          Menu
+          <span className="h-px w-7 bg-current transition-transform duration-300" />
+          <span className="h-px w-7 bg-current transition-transform duration-300" />
+          <span className="h-px w-7 bg-current transition-transform duration-300" />
         </button>
       </header>
 
       {/* Fullscreen Menu */}
       <nav
         ref={menuRef}
-        className="fixed inset-0 z-50 flex translate-x-full flex-col items-center justify-center bg-white will-change-transform"
+        className="fixed inset-0 z-50 flex translate-x-full flex-col items-center justify-center bg-white will-change-transform md:hidden"
       >
         {/* Close */}
         <button

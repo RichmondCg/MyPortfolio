@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation.jsx";
+import FloatingNav from "./FloatingNav.jsx";
 
 const CHAPTERS = [
   {
@@ -184,6 +185,9 @@ function Story() {
           </Link>
         </div>
       </main>
+
+      {/* Floating section nav */}
+      <FloatingNav />
     </div>
   );
 }
