@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <title>Redirecting | Richmond Gillaco</title>
+    <script>
+      (function () {
+        var base = "/MyPortfolio";
+        var path = window.location.pathname.startsWith(base)
+          ? window.location.pathname.slice(base.length) || "/"
+          : window.location.pathname;
+        var destination =
+          base +
+          "/?redirect=" +
+          encodeURIComponent(
+            path + window.location.search + window.location.hash,
+          );
+        window.location.replace(destination);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to Richmond Gillaco's portfolio.</p>
+  </body>
+</html>
