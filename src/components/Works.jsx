@@ -241,7 +241,7 @@ export function WorkCard({
             <img
               ref={imgRef}
               src={project.image}
-              alt=""
+              alt={`${project.title} project preview`}
               className={`img-work block w-full ${uniformImage ? "h-full object-cover" : "h-auto object-contain"}`}
               style={{
                 willChange: "transform",
@@ -259,8 +259,8 @@ export function WorkCard({
 export function ViewAllButton() {
   return (
     <div className="mt-20 md:mt-28 text-center">
-      <a
-        href="#/works"
+      <Link
+        to="/works"
         className="inline-flex items-center gap-4 border border-black rounded-full px-10 py-5 text-[12px] tracking-[0.25em] uppercase font-mono hover:bg-black hover:text-white transition-colors duration-300"
       >
         View all
@@ -278,7 +278,7 @@ export function ViewAllButton() {
             strokeLinecap="round"
           />
         </svg>
-      </a>
+      </Link>
     </div>
   );
 }

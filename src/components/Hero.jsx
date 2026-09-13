@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 import PeelText from "./PeelText.jsx";
 import Navigation from "./Navigation.jsx";
+
+const HERO_WORDS = ["the human", "the story", "the mind", "the person"];
 
 function Hero() {
   const curtainRef = useRef(null);
@@ -159,7 +162,6 @@ function Hero() {
   }, []);
 
   // Cycling words for button
-  const words = ["the human", "the story", "the mind", "the person"];
   const [wordIndex, setWordIndex] = useState(0);
   const wordRef = useRef(null);
 
@@ -172,7 +174,7 @@ function Hero() {
           duration: 0.3,
           ease: "power2.in",
           onComplete: () => {
-            setWordIndex((prev) => (prev + 1) % words.length);
+            setWordIndex((prev) => (prev + 1) % HERO_WORDS.length);
             gsap.fromTo(
               wordRef.current,
               { yPercent: 110, autoAlpha: 0 },
@@ -221,6 +223,9 @@ function Hero() {
           style={{ height: "clamp(3rem, 15vw, 16rem)" }}
           className="mb-8 sm:mb-10"
         >
+          <h1 className="sr-only">
+            Richmond Gillaco - Full-stack Web Developer
+          </h1>
           <PeelText
             text="RCHMND."
             revealDelay={2400}
@@ -235,9 +240,9 @@ function Hero() {
             curious?
           </p>
 
-          <a
+          <Link
             ref={btnRef}
-            href="#/me"
+            to="/me"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{ willChange: "transform" }}
@@ -261,7 +266,7 @@ function Hero() {
               style={{ minWidth: "clamp(3.5rem, 8vw, 5.5rem)" }}
             >
               <span ref={wordRef} className="block text-left">
-                {words[wordIndex]}
+                {HERO_WORDS[wordIndex]}
               </span>
             </span>
 
@@ -280,7 +285,7 @@ function Hero() {
                 strokeWidth="1.5"
               />
             </svg>
-          </a>
+          </Link>
 
           {/* Hint text below */}
           <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-black/70 animate-pulse">
@@ -330,7 +335,7 @@ function Hero() {
           {[
             {
               label: "LinkedIn",
-              href: "www.linkedin.com/in/richmond-gillaco",
+              href: "https://www.linkedin.com/in/richmond-gillaco",
             },
             { label: "GitHub", href: "https://github.com/RichmondCg" },
             {

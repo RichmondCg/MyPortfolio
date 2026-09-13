@@ -48,7 +48,7 @@ export const projects = [
     caseStudy: {
       category: "Service experience",
       year: "2026",
-      role: "Front-end Development, Softwaere Testing",
+      role: "Front-end Development, Software Testing",
       duration: "12 weeks",
       goal: "Make booking a haircut feel as personal as the chair itself.",
       story:

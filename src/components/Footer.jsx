@@ -154,9 +154,9 @@ export default function Footer() {
           ref={bigTextRef}
           className="overflow-hidden py-6 md:py-8 -mx-6 md:-mx-12"
         >
-          <h1 className="footer-big-text font-display text-[clamp(5rem,18vw,18rem)] leading-[0.82] tracking-tighter text-white/8 text-center select-none will-change-transform px-6 md:px-12 transition-colors duration-500 hover:text-white cursor-default">
+          <div className="footer-big-text font-display text-[clamp(5rem,18vw,18rem)] leading-[0.82] tracking-tighter text-white/8 text-center select-none will-change-transform px-6 md:px-12 transition-colors duration-500 hover:text-white cursor-default">
             RCHMND.
-          </h1>
+          </div>
         </div>
 
         {/* Divider */}
@@ -172,7 +172,7 @@ export default function Footer() {
             {[
               {
                 label: "LinkedIn",
-                href: "www.linkedin.com/in/richmond-gillaco",
+                href: "https://www.linkedin.com/in/richmond-gillaco",
               },
               { label: "GitHub", href: "https://github.com/RichmondCg" },
               {

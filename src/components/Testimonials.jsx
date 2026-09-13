@@ -33,7 +33,7 @@ function TestimonialCard({ testimonial }) {
       <div className="flex items-center gap-4">
         <img
           src={testimonial.image}
-          alt=""
+          alt={`${testimonial.name} testimonial portrait`}
           className="h-12 w-12 rounded-full object-cover"
         />
         <div>

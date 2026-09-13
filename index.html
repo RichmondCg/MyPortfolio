@@ -8,14 +8,10 @@
       content="Richmond Gillaco is a full-stack web developer from the Philippines who builds practical digital solutions for businesses through design, engineering, motion, and AI-assisted development."
     />
     <meta name="author" content="Richmond Gillaco" />
-    <meta
-      name="keywords"
-      content="Richmond Gillaco, full-stack web developer, business web solutions, web application development, front-end developer, back-end developer, interaction design, AI development, Philippines"
-    />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/icon.png" />
-    <link rel="canonical" href="https://github.com/RichmondCg/MyPortfolio" />
+    <link rel="icon" type="image/png" href="/src/assets/icon.png" />
+    <link rel="canonical" href="https://richmondcg.github.io/MyPortfolio/" />
     <link rel="me" href="https://github.com/RichmondCg" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Richmond Gillaco" />
@@ -29,7 +25,7 @@
     />
     <meta
       property="og:url"
-      content="https://github.com/RichmondCg/MyPortfolio"
+      content="https://richmondcg.github.io/MyPortfolio/"
     />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary" />
@@ -47,8 +43,11 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Richmond Gillaco",
-        "url": "https://github.com/RichmondCg/MyPortfolio",
-        "sameAs": ["https://github.com/RichmondCg"],
+        "url": "https://richmondcg.github.io/MyPortfolio/",
+        "sameAs": [
+          "https://github.com/RichmondCg",
+          "https://www.linkedin.com/in/richmond-gillaco"
+        ],
         "jobTitle": "Full-stack Web Developer",
         "description": "Full-stack web developer from the Philippines who helps businesses turn ideas and challenges into practical digital solutions through design, engineering, motion, and AI-assisted development.",
         "email": "mailto:richmondcamusgillaco@gmail.com",
@@ -81,6 +80,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var redirectPath = params.get("redirect");
+        if (redirectPath) {
+          window.history.replaceState(null, "", "/MyPortfolio" + redirectPath);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

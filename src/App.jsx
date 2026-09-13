@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import gsap from "gsap";
 import Lenis from "lenis";
@@ -11,10 +11,10 @@ import Experience from "./components/Experience.jsx";
 import Stack from "./components/Stack.jsx";
 import Certifications from "./components/Certifications.jsx";
 import Footer from "./components/Footer.jsx";
-import Testimonials from "./components/Testimonials.jsx";
 import CoreSkills from "./components/CoreSkills.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import { ProjectDetailPage } from "./components/ProjectDetail.jsx";
+import { projects } from "./data/projects.js";
 
 function SmoothScroll() {
   const location = useLocation();
@@ -73,6 +73,79 @@ function SmoothScroll() {
   return null;
 }
 
+function RouteMetadata() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const metadata = {
+      "/": {
+        title: "Richmond Gillaco | Full-stack Web Developer",
+        description:
+          "The portfolio of Richmond Gillaco, a full-stack web developer creating practical digital solutions and engaging web experiences for businesses.",
+      },
+      "/works": {
+        title: "Selected Works | Richmond Gillaco",
+        description:
+          "Explore selected web development, UI/UX, full-stack, and automation projects by Richmond Gillaco.",
+      },
+      "/me": {
+        title: "About Richmond Gillaco | Full-stack Web Developer",
+        description:
+          "Learn about Richmond Gillaco's approach to full-stack development, interaction design, and AI-assisted web development.",
+      },
+      "/story": {
+        title: "The Story | Richmond Gillaco",
+        description:
+          "Follow Richmond Gillaco's journey from learning HTML and CSS to building full-stack digital products.",
+      },
+      "/experience": {
+        title: "Experience | Richmond Gillaco",
+        description:
+          "Review Richmond Gillaco's experience in web development, software development, IoT, and technical projects.",
+      },
+      "/stack": {
+        title: "Technology Stack | Richmond Gillaco",
+        description:
+          "See the frameworks, tools, databases, and platforms Richmond Gillaco uses to build digital products.",
+      },
+      "/certifications": {
+        title: "Certifications and Awards | Richmond Gillaco",
+        description:
+          "View Richmond Gillaco's professional certifications, academic distinctions, and technology competition awards.",
+      },
+    };
+    const projectMatch = location.pathname.match(/^\/works\/([^/]+)$/);
+    const project = projectMatch
+      ? projects.find((item) => item.id === projectMatch[1])
+      : undefined;
+    const route = project
+      ? {
+          title: `${project.title} | Richmond Gillaco`,
+          description: `${project.tagline}. View the ${project.title} case study by Richmond Gillaco.`,
+        }
+      : metadata[location.pathname] || metadata["/"];
+    const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+    const canonicalPath =
+      location.pathname === "/"
+        ? `${baseUrl}/`
+        : `${baseUrl}${location.pathname}`;
+    const canonicalUrl = `${window.location.origin}${canonicalPath}`;
+
+    document.title = route.title;
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", route.description);
+    document
+      .querySelector('link[rel="canonical"]')
+      ?.setAttribute("href", canonicalUrl);
+    document
+      .querySelector('meta[property="og:url"]')
+      ?.setAttribute("content", canonicalUrl);
+  }, [location.pathname]);
+
+  return null;
+}
+
 function Home() {
   return (
     <div className="overflow-x-hidden bg-white font-mono text-black">
@@ -87,8 +160,9 @@ function Home() {
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename="/MyPortfolio">
       <SmoothScroll />
+      <RouteMetadata />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/works" element={<AllWorks />} />
@@ -100,7 +174,7 @@ function App() {
         <Route path="/certifications" element={<Certifications />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
