@@ -77,9 +77,9 @@ function AboutMe() {
             clean systems to make interfaces feel alive.
           </p>
           <p className="mt-4 text-sm leading-relaxed md:text-base">
-            Based in the Philippines, I focus on front-end development, creative
-            direction, and interaction design — turning ideas into fast,
-            accessible, and delightful products.
+            Based in the Philippines, I focus on front-end development,
+            interaction design, and creative direction — turning ideas into
+            fast, accessible, and delightful products.
           </p>
           <p className="mt-4 text-sm leading-relaxed md:text-base">
             I am someone who leverage AI capabilities to build web systems or
@@ -114,7 +114,7 @@ function AboutMe() {
 
         <div ref={listRef} className="mt-16 grid gap-10 md:grid-cols-3">
           <div>
-            <p className="me-fade mb-3 text-[11px] tracking-[0.32em] uppercase opacity-60">
+            <p className="me-fade mb-3 text-sm font-bold tracking-[0.32em] uppercase opacity-60">
               What I do
             </p>
             <ul className="space-y-2 text-sm">
@@ -128,7 +128,7 @@ function AboutMe() {
             </ul>
           </div>
           <div>
-            <p className="me-fade mb-3 text-[11px] tracking-[0.32em] uppercase opacity-60">
+            <p className="me-fade mb-3 text-sm font-bold tracking-[0.32em] uppercase opacity-60">
               Toolbox
             </p>
             <ul className="space-y-2 text-sm">
@@ -142,7 +142,7 @@ function AboutMe() {
             </ul>
           </div>
           <div>
-            <p className="me-fade mb-3 text-[11px] tracking-[0.32em] uppercase opacity-60">
+            <p className="me-fade mb-3 text-sm font-bold tracking-[0.32em] uppercase opacity-60">
               Currently
             </p>
             <ul className="space-y-2 text-sm">

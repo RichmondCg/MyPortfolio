@@ -5,7 +5,12 @@ import { Link } from "react-router-dom";
 import { homeProjects } from "../data/projects.js";
 gsap.registerPlugin(ScrollTrigger);
 
-export function WorkCard({ project, cursorRef, isHoverDevice }) {
+export function WorkCard({
+  project,
+  cursorRef,
+  isHoverDevice,
+  uniformImage = false,
+}) {
   const cardRef = useRef(null);
   const imgWrapRef = useRef(null);
   const imgRef = useRef(null);
@@ -222,13 +227,14 @@ export function WorkCard({ project, cursorRef, isHoverDevice }) {
         <Link
           to={project.link}
           aria-label={`View ${project.title} project`}
-          className="block"
+          className="group block"
         >
           <div
             ref={imgWrapRef}
             className="img-work-w relative overflow-hidden"
             style={{
               clipPath: "inset(0%)",
+              aspectRatio: uniformImage ? "4 / 3" : undefined,
               willChange: "transform",
             }}
           >
@@ -236,7 +242,7 @@ export function WorkCard({ project, cursorRef, isHoverDevice }) {
               ref={imgRef}
               src={project.image}
               alt=""
-              className="img-work block h-auto w-full object-contain"
+              className={`img-work block w-full ${uniformImage ? "h-full object-cover" : "h-auto object-contain"}`}
               style={{
                 willChange: "transform",
                 transform: "translate3d(0px, 0px, 0px)",
@@ -337,13 +343,13 @@ export default function Works() {
       className="relative bg-white pt-28 md:pt-40 pb-24 overflow-hidden"
     >
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 md:px-12">
-        <div className="flex flex-col md:flex-row items-start md:items-end justify-between space-y-3 mb-6 md:mb-16">
+        <div className="flex flex-col md:flex-row items-start md:items-baseline justify-between space-y-3 mb-6 md:mb-16">
           <div ref={labelRef}>
             <h1 className="font-display text-[clamp(2rem,8vw,12rem)] leading-[0.8] tracking-tight text-black">
               Works
             </h1>
           </div>
-          <p className="text-[12px] tracking-[0.2em] uppercase text-neutral-400 font-mono pb-2">
+          <p className="text-[12px] tracking-[0.2em] uppercase text-neutral-400 font-mono">
             Selected Projects
           </p>
         </div>

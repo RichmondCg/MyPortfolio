@@ -330,7 +330,7 @@ function Hero() {
           {[
             {
               label: "LinkedIn",
-              href: "https://linkedin.com/in/richmond-gillaco-9892812a5",
+              href: "www.linkedin.com/in/richmond-gillaco",
             },
             { label: "GitHub", href: "https://github.com/RichmondCg" },
             {

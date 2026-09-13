@@ -111,9 +111,11 @@ export default function Footer() {
               </span>
             </p>
             <h2 className="font-secondhead font-extrabold text-[clamp(2.8rem,6vw,5.5rem)] leading-[0.92] tracking-tight">
-              {["Let's built it!", "Together."].map((line, i) => (
+              {["Let's built it.", "Together."].map((line, i) => (
                 <span key={i} className="block overflow-hidden">
-                  <span className="footer-line-inner block">{line}</span>
+                  <span className="footer-line-inner block pb-[0.08em]">
+                    {line}
+                  </span>
                 </span>
               ))}
             </h2>
@@ -170,7 +172,7 @@ export default function Footer() {
             {[
               {
                 label: "LinkedIn",
-                href: "https://linkedin.com/in/richmond-gillaco-9892812a5",
+                href: "www.linkedin.com/in/richmond-gillaco",
               },
               { label: "GitHub", href: "https://github.com/RichmondCg" },
               {

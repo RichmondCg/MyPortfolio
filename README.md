@@ -1,16 +1,15 @@
-# React + Vite
+# Richmond Gillaco
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I am Richmond Gillaco, a full-stack web developer from the Philippines. I help businesses turn ideas, challenges, and opportunities into reliable digital solutions that are useful to their customers and meaningful to their goals.
 
-Currently, two official plugins are available:
+I build across the full stack, from clear and engaging interfaces to the applications, APIs, databases, and systems that support them. I care about creating solutions that are practical to use, maintain, and grow with a business.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+I bring together design, engineering, motion, and AI-assisted development to create web experiences that are both capable and human. Whether the goal is to improve a workflow, communicate a brand, launch a product, or serve customers better, I focus on solving the real problem behind the brief.
 
-## React Compiler
+I am currently looking for a full-time opportunity and am open to collaborations with people and businesses building something useful.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Explore My Work
 
-## Expanding the ESLint configuration
+Visit the [official portfolio project](https://github.com/RichmondCg/MyPortfolio) or connect with me on [GitHub](https://github.com/RichmondCg).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+For work inquiries, email [richmondcamusgillaco@gmail.com](mailto:richmondcamusgillaco@gmail.com).

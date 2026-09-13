@@ -13,6 +13,17 @@ function Navigation({ navRef, items }) {
     { label: "About Me", to: "/me" },
     { label: "Works", to: "/works" },
   ];
+
+  const isActive = (item) =>
+    location.pathname === item.to ||
+    (item.to === "/works" && location.pathname.startsWith("/works/"));
+
+  const desktopLinkClass = (item) =>
+    `nav-link text-xs font-extrabold uppercase tracking-[0.2em] ${isActive(item) ? "is-active" : ""}`;
+
+  const mobileLinkClass = (item) =>
+    `nav-link-mobile font-display text-3xl tracking-tight sm:text-4xl md:text-5xl ${isActive(item) ? "is-active" : ""}`;
+
   // Open / close menu
   useEffect(() => {
     if (!menuRef.current) return;
@@ -107,7 +118,8 @@ function Navigation({ navRef, items }) {
                 key={item.label}
                 type="button"
                 onClick={() => handleClick(item)}
-                className="text-xs font-extrabold uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-50"
+                className={desktopLinkClass(item)}
+                aria-current={isActive(item) ? "page" : undefined}
               >
                 {item.label}
               </button>
@@ -115,7 +127,8 @@ function Navigation({ navRef, items }) {
               <Link
                 key={item.label}
                 to={item.to}
-                className="text-xs font-extrabold uppercase tracking-[0.2em] transition-opacity duration-300 hover:opacity-50"
+                className={desktopLinkClass(item)}
+                aria-current={isActive(item) ? "page" : undefined}
               >
                 {item.label}
               </Link>
@@ -169,7 +182,8 @@ function Navigation({ navRef, items }) {
                 key={item.label}
                 type="button"
                 onClick={() => handleClick(item)}
-                className="font-display text-3xl tracking-tight transition-opacity duration-300 hover:opacity-50 sm:text-4xl md:text-5xl"
+                className={mobileLinkClass(item)}
+                aria-current={isActive(item) ? "page" : undefined}
               >
                 {item.label}
               </button>
@@ -178,7 +192,8 @@ function Navigation({ navRef, items }) {
                 key={item.label}
                 to={item.to}
                 onClick={() => setMenuOpen(false)}
-                className="font-display text-3xl tracking-tight transition-opacity duration-300 hover:opacity-50 sm:text-4xl md:text-5xl"
+                className={mobileLinkClass(item)}
+                aria-current={isActive(item) ? "page" : undefined}
               >
                 {item.label}
               </Link>

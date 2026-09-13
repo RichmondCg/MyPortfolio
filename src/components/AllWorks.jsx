@@ -77,7 +77,7 @@ function AllWorks() {
       <Navigation />
 
       <main className="mx-auto max-w-[1200px] px-6 pt-32 md:px-12 md:pt-44">
-        <div className="flex items-end justify-between mb-10 md:mb-16">
+        <div className="flex items-baseline justify-between mb-10 md:mb-16">
           <div ref={headRef}>
             <h1 className="font-display text-[clamp(2rem,8vw,12rem)] leading-[0.8] tracking-tight text-black">
               Works
@@ -85,7 +85,7 @@ function AllWorks() {
           </div>
           <p
             ref={subRef}
-            className="text-[12px] tracking-[0.2em] uppercase text-neutral-400 font-mono pb-2"
+            className="text-[12px] tracking-[0.2em] uppercase text-neutral-400 font-mono"
           >
             All Projects
           </p>
@@ -110,6 +110,7 @@ function AllWorks() {
               index={index}
               cursorRef={cursorRef}
               isHoverDevice={isHoverDevice}
+              uniformImage
             />
           ))}
         </div>

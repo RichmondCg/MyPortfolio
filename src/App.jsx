@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import gsap from "gsap";
+import Lenis from "lenis";
 import Hero from "./components/Hero.jsx";
 import Works from "./components/Works.jsx";
 import AllWorks from "./components/AllWorks.jsx";
@@ -10,19 +11,41 @@ import Experience from "./components/Experience.jsx";
 import Stack from "./components/Stack.jsx";
 import Certifications from "./components/Certifications.jsx";
 import Footer from "./components/Footer.jsx";
+import Testimonials from "./components/Testimonials.jsx";
+import CoreSkills from "./components/CoreSkills.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import { ProjectDetailPage } from "./components/ProjectDetail.jsx";
 
 function SmoothScroll() {
   const location = useLocation();
 
+  // Keep native wheel and touch scrolling eased across every route.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const lenis = new Lenis({
+      duration: 1.1,
+      smoothWheel: true,
+      syncTouch: true,
+    });
+
+    let animationFrame;
+    const raf = (time) => {
+      lenis.raf(time);
+      animationFrame = requestAnimationFrame(raf);
+    };
+
+    animationFrame = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+      lenis.destroy();
+    };
+  }, []);
+
   // Scroll to top on route change
   useEffect(() => {
-    gsap.to(window, {
-      scrollTo: { y: 0, autoKill: false },
-      duration: 0.8,
-      ease: "power3.out",
-    });
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   // Smooth scroll for anchor links
@@ -55,6 +78,8 @@ function Home() {
     <div className="overflow-x-hidden bg-white font-mono text-black">
       <Hero />
       <Works />
+      {/* <Testimonials /> */}
+      <CoreSkills />
       <Footer />
     </div>
   );

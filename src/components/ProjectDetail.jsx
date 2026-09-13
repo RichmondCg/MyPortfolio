@@ -171,7 +171,7 @@ function ProjectDetail({ project }) {
             <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-neutral-400 sm:mb-5 sm:text-[11px] sm:tracking-[0.24em]">
               The brief
             </p>
-            <h2 className="max-w-xs font-secondhead text-[2rem] font-bold leading-[0.98] tracking-tight sm:text-3xl md:text-5xl md:leading-[0.95]">
+            <h2 className="max-w-xs font-secondhead text-[2rem] font-bold leading-[0.98] tracking-tight sm:text-3xl md:text-5xl md:leading-[0.95] text-black/60">
               {content.goal}
             </h2>
           </div>
@@ -190,7 +190,7 @@ function ProjectDetail({ project }) {
                 <span>{content.year}</span>
               </div>
             </div>
-            <p className="max-w-2xl font-secondhead text-[clamp(1.5rem,6vw,3.1rem)] font-medium leading-[1.1] tracking-tight sm:text-[clamp(1.6rem,3vw,3.1rem)] sm:leading-[1.05]">
+            <p className="max-w-2xl font-secondhead text-[clamp(1.5rem,6vw,3.1rem)] leading-[1.1] tracking-tight sm:text-[clamp(1.6rem,3vw,3.1rem)] sm:leading-[1.05]">
               {content.story}
             </p>
           </div>

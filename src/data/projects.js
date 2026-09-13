@@ -10,7 +10,7 @@ export const projects = [
   {
     id: "nueva",
     title: "Nueva Insights Website",
-    tagline: "An SEO and SMM service provider website.",
+    tagline: "UI/UX Design // Development",
     image: nuevaImg,
     link: "/works/nueva",
     area: "nueva",
@@ -20,7 +20,7 @@ export const projects = [
     caseStudy: {
       category: "Digital strategy",
       year: "2026",
-      role: "Design, development",
+      role: "Design, Development",
       duration: "6 weeks",
       goal: "Turn a service business into a clear, credible first conversation.",
       story:
@@ -38,8 +38,7 @@ export const projects = [
   {
     id: "paps",
     title: "Paps Barbershop Appointment System",
-    tagline:
-      "A barbershop landing page, appointment booking, and information system.",
+    tagline: "Front-end Development // Software Testing",
     image: papsImg,
     link: "/works/paps",
     area: "paps",
@@ -49,7 +48,7 @@ export const projects = [
     caseStudy: {
       category: "Service experience",
       year: "2026",
-      role: "UX, UI, development",
+      role: "Front-end Development, Softwaere Testing",
       duration: "12 weeks",
       goal: "Make booking a haircut feel as personal as the chair itself.",
       story:
@@ -67,8 +66,7 @@ export const projects = [
   {
     id: "preparado",
     title: "Preparado AI - Job Tracking Platform",
-    tagline:
-      "A job tracking platform that uses AI to analyze job descriptions. Just paste the job link and let the AI analyze it for you.",
+    tagline: "Full-stack Development // System Architecture",
     image: prepImg,
     link: "/works/preparado",
     area: "preparado",
@@ -78,7 +76,7 @@ export const projects = [
     caseStudy: {
       category: "AI product",
       year: "2026",
-      role: "Product design, development",
+      role: "Full-stack Development, System Architect",
       duration: "2 weeks",
       goal: "Replace the scattered job hunt with one calm, useful workspace.",
       story:
@@ -96,8 +94,7 @@ export const projects = [
   {
     id: "clinic",
     title: "NuevaCare Clinic",
-    tagline:
-      "An AI-driven appointment system with a chatbot that feels more like talking to someone than filling out a traditional form.",
+    tagline: "UI/UX Design // Full-stack Development",
     image: clinicImg,
     link: "/works/clinic",
     area: "clinic",
@@ -107,7 +104,7 @@ export const projects = [
     caseStudy: {
       category: "Healthcare experience",
       year: "2026",
-      role: "UX, conversational UI",
+      role: "UX, conversational UI, Full-stack Development",
       duration: "3 weeks",
       goal: "Make an appointment start with a human answer, not a cold form.",
       story:
@@ -125,8 +122,7 @@ export const projects = [
   {
     id: "smartfit",
     title: "SmartFit",
-    tagline:
-      "Website promoting a healthier lifestyle through fitness and better habits.”",
+    tagline: "UI Design // Front-end Development",
     image: fitImg,
     link: "/works/smartfit",
     area: "smartfit",
@@ -155,8 +151,7 @@ export const projects = [
     id: "irri",
     title:
       "Solar-Powered Automated Irrigation System for Farmers with Monitoring App",
-    tagline:
-      "A farm monitoring system using an ESP8266 board, integrated with the Blynk app to monitor farm conditions and automatically irrigate plants when they need water.",
+    tagline: "Automation // IoT System",
     image: irriImg,
     link: "/works/irri",
     area: "irri",
@@ -166,7 +161,7 @@ export const projects = [
     caseStudy: {
       category: "IoT system",
       year: "2024",
-      role: "Hardware, app, UX",
+      role: "Hardware, app, UX, Automation, IoT",
       duration: "18 weeks",
       goal: "Give farmers a clearer view of the water their crops need.",
       story:
@@ -185,8 +180,7 @@ export const projects = [
     id: "sfads",
     title:
       "SFADS - Smart Feeding and Drinking System with SMS Updates for Poultry Farmers",
-    tagline:
-      "An automated poultry feeding system that dispenses feeds and distributes them through a conveyor belt. It also sends SMS updates to notify farmers when the chickens have been fed or when the hopper and water tank are critically low.",
+    tagline: "Automation // IoT System",
     image: sfadsImg,
     link: "/works/sfads",
     area: "sfads",
@@ -196,7 +190,7 @@ export const projects = [
     caseStudy: {
       category: "Connected hardware",
       year: "2025",
-      role: "System design, development",
+      role: "Hardware, app, Automation, IoT",
       duration: "16 weeks",
       goal: "Make poultry care more predictable when no one can watch every minute.",
       story:
